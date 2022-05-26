@@ -63,3 +63,14 @@ function XO(str) {
 function addBinary(a,b){
   return (a+b).toString(2)
 }
+
+
+//Random password 
+
+function passwordRandom(input){
+  arr=input.split('')
+  password=arr.sort((a,b)=>Math.random()-0.5)
+  return password.join('')
+}
+
+console.log(passwordRandom('yourpasswordwillberandom'))
