@@ -106,3 +106,30 @@ const spinWords=(string)=>{
 }
 
 
+//Count characters in your string
+//The main idea is to count all the occurring characters in a string. 
+
+const contadorDeLetras = palabra =>{
+
+    return palabra.split('').reduce((prev,act)=>{
+      prev[act] ? prev[act]++ : prev[act] = 1
+      return prev
+    },{})
+  }
+  let palabra = 'otorrinolaringologo'
+  let objLetras = contadorDeLetras(palabra)
+  
+  for (let i in objLetras){
+    console.log(`Letra ${i.toUpperCase()} : ${objLetras[i]}`)
+  }
+//Output:
+/*
+Letra O : 6
+Letra T : 1
+Letra R : 3
+Letra I : 2
+Letra N : 2
+Letra L : 2
+Letra A : 1
+Letra G : 2
+*/
